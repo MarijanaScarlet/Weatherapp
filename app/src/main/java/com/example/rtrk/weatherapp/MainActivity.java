@@ -7,10 +7,11 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.rtrk.weatherapp.database.ORMFrameworkSimulator;
+import com.example.rtrk.weatherapp.weather.WeatherActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    ORMFrameworkSimulator database;
+    private static ORMFrameworkSimulator database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
         if(database.userExists(username,password)){
             System.out.println("User exists");
+
+            startActivity(new Intent(this,WeatherActivity.class));
         }
+
+
     }
 
     public void register(View v)

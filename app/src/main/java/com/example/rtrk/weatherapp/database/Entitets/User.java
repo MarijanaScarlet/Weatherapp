@@ -1,4 +1,4 @@
-package com.example.rtrk.weatherapp.database;
+package com.example.rtrk.weatherapp.database.Entitets;
 
 public class User {
 
